@@ -6,6 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 
@@ -19,7 +22,7 @@ import { FormComponent } from './form/form.component';
     FormComponent
   ],
   imports: [
-    BrowserModule,MatNativeDateModule, BrowserAnimationsModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,  MatNativeDateModule
+    BrowserModule,MatNativeDateModule, MatToolbarModule, BrowserAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,  MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
