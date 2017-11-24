@@ -4,5 +4,8 @@
 }
 
 .example-container > * {
-  width: 100%;
+  width: 60%;
+ button {
+    width: 30%
+  }
 }

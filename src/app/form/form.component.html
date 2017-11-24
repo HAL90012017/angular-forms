@@ -1,18 +1,20 @@
 <div class="example-container">
-  <mat-toolbar>Template Driven Validation</mat-toolbar>
+  <mat-toolbar>Employee Details Template Driven Validation</mat-toolbar>
   <mat-form-field>
-    <input matInput #input placeholder="Input">
+    <input matInput #input placeholder="Name" [(ngModel)]="model.employeeName">
   </mat-form-field>
 
   <mat-form-field>
-      <input matInput placeholder="Input">
+      <input matInput placeholder="Number" [(ngModel)]="model.employeeNumber">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="model.employeeStartdate"  placeholder="Choose a date">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
 
-<button mat-button>Click me!</button>
+<button mat-button color="primary" (click)="submit()">Submit</button>
 </div>
+
+<pre *ngIf="submitted">Empolyee Details: {{getSubmittedEmployeeInfo()}}</pre>

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule }   from '@angular/forms';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -22,7 +23,7 @@ import { FormComponent } from './form/form.component';
     FormComponent
   ],
   imports: [
-    BrowserModule,MatNativeDateModule, MatToolbarModule, BrowserAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,  MatNativeDateModule
+    BrowserModule, FormsModule, MatNativeDateModule, MatToolbarModule, BrowserAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatDatepickerModule,  MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
