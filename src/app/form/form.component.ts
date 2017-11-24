@@ -6,14 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-
+  public model = {};
+  public submitted: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
-<<<<<<< Updated upstream
-=======
  public getSubmittedEmployeeInfo () {
    return JSON.stringify(this.model);
  }
@@ -29,5 +28,4 @@ export class FormComponent implements OnInit {
        }
    }
  }
->>>>>>> Stashed changes
 }
