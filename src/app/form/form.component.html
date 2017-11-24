@@ -1,15 +1,27 @@
-<div class="example-container">
+<form #employeeDetailsForm='ngForm'>
+  <div class="employeeDetails-container">
+  <mat-toolbar>Employee Details (Template Driven Validation Tutorial)</mat-toolbar>
   <mat-form-field>
-    <input matInput placeholder="Input">
+    <input matInput #input placeholder="Employee Name" name="employeeName"  #employeeName="ngModel" required [(ngModel)]="model.employeeName">
   </mat-form-field>
-
+  <span *ngIf="(employeeName.invalid && employeeName.touched)" class="validation">
+    Employee Name is required
+  </span>
   <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
+      <input matInput placeholder="Number" name="employeeNumber"  #employeeNumber="ngModel" required [(ngModel)]="model.employeeNumber">
   </mat-form-field>
-
+  <span *ngIf="(employeeNumber.invalid && employeeNumber.touched)" class="validation">
+    Employee Number is required
+  </span>
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <input matInput required [matDatepicker]="picker" name="employeeStartdate" #employeeStartdate="ngModel" [(ngModel)]="model.employeeStartdate"  placeholder="Choose a date">
   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
+<span *ngIf="(employeeStartdate.invalid && employeeStartdate.touched)" class="validation">
+  Employee Start Date is required
+</span>
+<button mat-button color="primary" (click)="submit(employeeDetailsForm)">Submit</button>
 </div>
+</form>
+<pre *ngIf="submitted">Empolyee Details: {{getSubmittedEmployeeInfo()}}</pre>

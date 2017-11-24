@@ -1,8 +1,14 @@
-.example-container {
+.employeeDetails-container {
   display: flex;
   flex-direction: column;
 }
 
-.example-container > * {
-  width: 100%;
+.validation {
+  color: red;
+}
+.employeeDetails-container > * {
+  width: 60%;
+ button {
+    width: 30%
+  }
 }
